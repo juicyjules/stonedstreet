@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stonedstreet</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <nav>
+            <div class="logo hidden">
+                <span class="hidden">Stonedstreet</span>
+                <img class="logo-img" src="stone.png" />
+            </div>
+            <div class="menu">
+                <div class="menu-item" onclick="window.location.href='https://home.stonedstreet.de'">
+                    <span>homestate</span>
+                </div>
+                <div class="menu-item" onclick="window.location.href='https://short.stonedstreet.de'">
+                    <span>urlshorten</span>
+                </div>
+                <div class="menu-item" onclick="window.location.href='https://streaming.stonedstreet.de'">
+                    <span>streaming</span>
+                </div>
+                <div class="menu-item">
+                    <span>about</span>
+                </div>
+            </div>
+        </nav>
+        <div class="circle-window">
+            <div class="overlay-circle"></div>
+        </div>  
+        <div class="header-image-container parallax">
+            <img class="header-image" src="images/stonedstreet.jpg" />
+            <h1 class="underline-in-out">Stonedstreet</h1>
+        </div>
+     
+        <main class="content">
+            <div class="cyber hidden"> 
+                <div class="lines">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="outer-ring">
+                    <div class="inner-ring">
+                        <div class="dot">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logo-header hidden">
+                <img src="stone.png"/>
+                <h1>Stonedstreet</h1>
+            </div>
+            <div class="cards">
+                <div class="card" onclick="window.location.href='https://home.stonedstreet.de'">
+                    <div class="card-img">
+                        <img src="images/home.jpg"/>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">HomeState<i class="stoned"></i></div>
+                        <div class="card-text">Homeautomation Solution.</div>
+                        <div class="card-addition">
+                            <button class="card-button" onclick="window.location.href='https://home.stonedstreet.de'">go home</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" onclick="window.location.href='https://streaming.stonedstreet.de'">
+                    <div class="card-img">
+                        <img src="images/stream.jpg"/>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">Streaming<i class="stoned"></i></div>
+                        <div class="card-text">Only serving the finest content known to man.</div>
+                        <div class="card-addition">
+                            <button class="card-button" onclick="window.location.href='https://streaming.stonedstreet.de'">stream on</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" onclick="window.location.href='https://short.stonedstreet.de'">
+                    <div class="card-img">
+                        <img src="images/url.jpg"/>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">URLShorten<i class="stoned"></i></div>
+                        <div class="card-text">Create URL-Slugs linking to any place in the web.</div>
+                        <div class="card-addition">
+                            <button class="card-button" onclick="window.location.href='https://short.stonedstreet.de'">shorten it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card not-yet" onclick="window.location.href='https://blog.stonedstreet.de'">
+                    <div class="card-img">
+                        <img src="images/blog.jpg"/>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">Blog<i class="stoned"></i></div>
+                        <div class="card-text">Dunno, read something I wrote.</div>
+                        <div class="card-addition">
+                            <button class="card-button" onclick="window.location.href='https://blog.stonedstreet.de'">blog up</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card not-yet" onclick="window.location.href='https://cloud.stonedstreet.de'">
+                    <div class="card-img">
+                        <img src="images/cloud.jpg"/>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">Cloud<i class="stoned"></i></div>
+                        <div class="card-text">Hosting your files totally secure<sup>tm</sup> (in my living room).</div>
+                        <div class="card-addition">
+                            <button class="card-button" onclick="window.location.href='https://cloud.stonedstreet.de'">to the skies</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" onclick="window.location.href='https://2019.igem.org/Team:TU_Kaiserslautern'">
+                    <div class="card-img">
+                        <img src="images/igem.svg"/>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header">Best Wiki</div>
+                        <div class="card-text">Gold Medal-winning Wiki Page for the 2019 iGEM-competition.</div>
+                        <div class="card-addition">
+                            <button class="card-button" onclick="window.location.href='https://2019.igem.org/Team:TU_Kaiserslautern'">learn more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="made-with">
+                made with <i class="icon text-lined material-icons white heart-beat">favorite</i> by 
+                <div class="jules-anchor">
+                    <a href="https://twitter.com/juiciestjules" id="jules-text" class="jules typewritten">Jules</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
