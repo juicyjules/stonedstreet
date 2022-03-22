@@ -41,6 +41,14 @@ nav {
     top:0;
     z-index:100;
 }
+@media screen and (max-width: 560px) {
+    nav {
+        display:none!important;
+    }
+    body {
+        padding-top:0!important;
+    }
+}
 
 footer {
     display:flex;
@@ -161,6 +169,12 @@ footer {
     .content {
         padding-right:20%!important;
         padding-left:20%!important;
+    }
+}
+@media screen and (max-width: 560px) {
+    .content {
+        padding-right:1.5rem!important;
+        padding-left:1.5rem!important;
     }
 }
 
@@ -508,6 +522,7 @@ footer {
 }
 .card-img {
     width:100%;
+    min-width:100%;
     height: 40%;
     position:relative;
 }
@@ -522,7 +537,7 @@ footer {
     height:100%;
     filter:grayscale(1);
     transform-origin: 50%;
-    transform: scale(1);
+    transform: scale(1.1);
     transition: filter 0.5s linear;
 }
 .card-header {
