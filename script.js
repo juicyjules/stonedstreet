@@ -7,6 +7,7 @@ const delay = 1500;
 
 const heading = document.getElementById('heading');
 heading.innerHTML = window.location.hostname
+document.title = window.location.hostname;
 
 const jules = [
     "jules",
