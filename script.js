@@ -5,6 +5,9 @@ const textTime = 1000;
 const pause = 100;
 const delay = 1500;
 
+const heading = document.getElementById('heading');
+heading.innerHTML = window.location.hostname
+
 const jules = [
     "jules",
     "JuicyJules",
