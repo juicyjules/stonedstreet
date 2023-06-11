@@ -5,8 +5,6 @@ const textTime = 1000;
 const pause = 100;
 const delay = 1500;
 
-const heading = document.getElementById('heading');
-heading.innerHTML = window.location.hostname
 document.title = window.location.hostname;
 
 const jules = [
@@ -24,6 +22,7 @@ const jules = [
     "Julian",
     "Jules",
     "Ligma",
+    "Leander"
 ]
 
 
@@ -32,7 +31,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 
 
-function typewrite (word) {
+function typewrite(word) {
     let i = 0;
     let wordLength = word.length;
     let interval = setInterval(() => {
@@ -43,7 +42,8 @@ function typewrite (word) {
         }
     }, pause);
 }
-function undoTypewrite () {
+
+function undoTypewrite() {
     let word = julesText.innerHTML;
     let i = word.length;
     let interval = setInterval(() => {
@@ -55,56 +55,56 @@ function undoTypewrite () {
     }, pause);
 }
 
-function doWrite (word) {
+function doWrite(word) {
     typewrite(word);
     let prom = new Promise(r => setTimeout(() => {
         undoTypewrite();
-    }, word.length*pause + textTime));
+    }, word.length * pause + textTime));
     return prom;
 }
 
-async function typeLoop (){
+async function typeLoop() {
     let random = Math.floor(Math.random() * jules.length);
     let word = jules[random];
     let ret = doWrite(word);
-    await sleep(textTime*1.7 + 2*word.length*pause);
+    await sleep(textTime * 1.7 + 2 * word.length * pause);
     typeLoop();
 }
 
 const parallaxElems = document.getElementsByClassName("parallax");
 
-function parallax (elements) {
-    for(let element of elements){
+function parallax(elements) {
+    for (let element of elements) {
         var scrolled = window.pageYOffset;
-       
+
         var coords = (scrolled * 0.4) + 'px'
         element.style.transform = 'translateY(' + coords + ')';
     }
 }
 // Add typewriter effect to footer
-setTimeout(()=> typeLoop(),delay);
+setTimeout(() => typeLoop(), delay);
 // Apply parallax to parallax Elements
 // Ensure that underline animation only plays after load
 const hoverElements = document.querySelectorAll(".underline-in-out");
 hoverElements.forEach((element) => {
-        console.log(element)
-        if (!element.classList.contains("hovered")){
-            element.classList.add("hovered")
-        } 
-    });
+    console.log(element)
+    if (!element.classList.contains("hovered")) {
+        element.classList.add("hovered")
+    }
+});
 // Do circle things :>
 const circles = document.querySelectorAll(".overlay-circle");
 scrollCircle = (elems) => {
-    elems.forEach((elem) => {
-        var scrolled = window.pageYOffset;
-       
-        var coords = (scrolled * 0.22)
-        elem.style.transform = 'scale(' + coords + ')';
-        console.log(elem.getBoundingClientRect().width)
-    });
-}
-// set scroll event listener
+        elems.forEach((elem) => {
+            var scrolled = window.pageYOffset;
+
+            var coords = (scrolled * 0.22)
+            elem.style.transform = 'scale(' + coords + ')';
+            console.log(elem.getBoundingClientRect().width)
+        });
+    }
+    // set scroll event listener
 window.onscroll = () => {
-	parallax(parallaxElems)
+    parallax(parallaxElems)
     scrollCircle(circles);
 }
