@@ -39,8 +39,8 @@ if (window.DeviceOrientationEvent) {
   window.addEventListener('deviceorientation', (event) => {
     const tiltXDevice = event.gamma;
     const tiltYDevice = event.beta;
-    const tiltXFactor = 0.05 * tiltStrength/4;
-    const tiltYFactor = 0.05 * tiltStrength/4;
+    const tiltXFactor = 0.05 * tiltStrength;
+    const tiltYFactor = 0.05 * tiltStrength;
 
     const card = document.querySelector('.card');
     card.style.transform = `rotateY(${currentRotation}deg) rotateX(${tiltYDevice * tiltYFactor}deg) rotateY(${tiltXDevice * tiltXFactor}deg)`;
