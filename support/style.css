@@ -40,7 +40,8 @@ h2, h3 {
     backface-visibility: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    box-sizing:border-box;
 }
 
 .front {
@@ -110,6 +111,10 @@ a:hover {
   h3 {
     margin-top:5px;
   }
+    p {
+    margin-top:5px;
+    margin-bottom:5px;
+  }
   /* Media Query for smaller screens (e.g., mobile) */
 @media (max-width: 768px) {
     .card-container {
@@ -117,3 +122,45 @@ a:hover {
         max-width: none; /* Remove max-width on mobile */
     }
 }
+.card {
+    position: relative; /* Needed for absolute positioning of the banner */
+    /* ... other card styles ... */
+  }
+  .front {
+    overflow:hidden;
+  }
+.corner-banner {
+  position: absolute;
+  background-color: #F2545B; /* Example banner color (orange) */
+  color: #F3F7F0;
+  padding: 5px 70px;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+.top-left {
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: rotate(-45deg) translate(-10px, 0); /* Corrected translation */
+  }
+  
+  .top-right {
+    top: 0;
+    right: 0;
+    transform-origin: center;
+    transform: translate(25%, 100%) rotate(45deg) ; /* Corrected translation */
+  }
+  
+  .bottom-left {
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom left;
+    transform: rotate(45deg) translate(0, 10px); /* Corrected translation */
+  }
+  
+  .bottom-right {
+    bottom: 0;
+    right: 0;
+    transform-origin: bottom right;
+    transform: rotate(-45deg) translate(0, 10px); /* Corrected translation */
+  }
+  

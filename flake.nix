@@ -11,7 +11,7 @@
       src = ./.;
     in
       pkgs.stdenv.mkDerivation {
-        pname = "copy-source";
+        pname = "stonedstreet";
         version = "0.1";
 
         src = src;
