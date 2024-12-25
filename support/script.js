@@ -35,7 +35,7 @@ document.querySelector('.card-container').addEventListener('click', handleCardCl
 document.querySelector('.card-container').addEventListener('touchstart', handleCardSwipe);
   
   
-if (false && window.DeviceOrientationEvent) {
+if (window.DeviceOrientationEvent) {
   window.addEventListener('deviceorientation', (event) => {
     const tiltXDevice = event.gamma;
     const tiltYDevice = event.beta;
